@@ -23,10 +23,10 @@
 .ministry-featured-copy h3{font:900 clamp(2.3rem,4.4vw,4.8rem)/1.02 var(--font);letter-spacing:-.065em;margin:22px 0 8px}
 .ministry-tagline{font:800 .75rem var(--font);letter-spacing:.22em;color:#eac8a0;margin:4px 0 24px}
 .ministry-featured-copy .body-copy{margin:22px 0 29px}
-.ministry-meeting{border-left:3px solid #b82b36;padding:8px 0 8px 17px;display:flex;flex-direction:column;gap:4px;margin:22px 0;color:#ddd2d1}
+.ministry-meeting{border-left:3px solid #b82b36;padding:8px 0 8px 17px;display:flex;flex-direction:row;align-items:baseline;flex-wrap:wrap;column-gap:18px;row-gap:10px;margin:22px 0;color:#ddd2d1}
 .ministry-meeting span{font:700 .68rem var(--font);text-transform:uppercase;letter-spacing:.12em}
-.ministry-meeting strong{font:800 clamp(1.25rem,2vw,1.75rem) var(--font);color:var(--cream)}
-.ministry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:22px}
+.ministry-meeting strong{font:800 clamp(1.25rem,2vw,1.75rem) var(--font);color:var(--cream);white-space:nowrap}
+.ministry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:clamp(56px,6vw,86px)}
 .ministry-card{min-width:0;display:flex;flex-direction:column;border:1px solid #49383f;background:#1b191c;overflow:hidden}
 .ministry-card-art{height:325px;display:grid;place-items:center;background:#181719;overflow:hidden}
 .ministry-card-art img{width:100%;height:100%;object-fit:contain}
@@ -42,3 +42,7 @@
 @media(max-width:950px){.ministry-featured{grid-template-columns:1fr}.ministry-featured-media{min-height:360px}.ministry-featured-copy{padding:38px}.ministry-featured-copy h3{font-size:clamp(2.6rem,6vw,4rem)}.ministry-card-art{height:285px}}
 @media(max-width:670px){.ministry-grid{grid-template-columns:1fr}.ministry-featured-media{min-height:230px}.ministry-featured-copy{padding:28px 23px 34px}.ministry-featured-copy h3{font-size:clamp(2.2rem,9vw,3.2rem)}.ministry-card-art{height:255px}.ministry-card-copy{padding:29px 24px 34px}.ministry-card-wide{grid-column:auto;grid-template-columns:1fr}.ministry-card-wide .ministry-card-art{height:280px;min-height:0}.ministry-card-wide .ministry-card-art img{max-height:230px;width:75%}}
 @media(prefers-reduced-motion:reduce){.ministry-featured-media video{visibility:hidden}.ministry-featured-media{background:center/contain no-repeat url('../images/disciple-one.webp')}}
+
+/* Youth and children's age ranges */
+.ministry-age{display:inline-block;margin:9px 0 13px;padding:10px 16px;background:#30252a;border-left:3px solid var(--red);color:#f2dfe0;font:800 .78rem var(--font);letter-spacing:.04em}
+.ministry-card-copy .ministry-age+.body-copy{margin-top:7px}
