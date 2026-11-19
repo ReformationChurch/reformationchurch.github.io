@@ -7,6 +7,7 @@ window.REFORMATION = {
   address: '3050 Chesterfield Hwy, Cheraw, SC 29520',
   social: {
     youtube: 'https://youtube.com/@ReformationChurchCheraw',
+    youtubeShorts: 'https://www.youtube.com/@ReformationChurchCheraw/shorts',
     tiktok: 'https://tiktok.com/@reformationchurch',
     facebook: 'https://facebook.com/Reformationchur',
     instagram: 'https://instagram.com/reformationchurchcheraw',
