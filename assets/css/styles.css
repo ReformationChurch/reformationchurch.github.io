@@ -185,3 +185,31 @@
   .brand-label{font-size:.82rem}
   .brand-label small{font-size:.5rem;letter-spacing:.22em}
 }
+
+
+/* Reformation Church: richer true-red accents v1 */
+:root {
+  --red:#c62832;
+  --red2:#8f151d;
+}
+.eyebrow,.event-detail-label {color:#ed6269}
+.eyebrow:before {background:var(--red)}
+.text-red,.hero-title .accent {color:#e34b55}
+.btn.primary {
+  background:linear-gradient(180deg,#d5323d 0%,#bb202a 100%);
+  color:#fff;
+  border-color:#cb2a35;
+  box-shadow:0 10px 24px rgba(198,40,50,.20);
+}
+.btn.primary:hover {background:linear-gradient(180deg,#e03b46 0%,#c92531 100%)}
+.nav-give {background:#b8212b;border-color:#c6333c;color:#fff}
+.nav-give:hover {background:#d02b36;border-color:#e13b46}
+.section-link,.visit-card a {border-bottom-color:var(--red)}
+.section-link:hover {color:#ef7378}
+.hero-title .accent,.text-red {text-shadow:none}
+.slide-counter span {color:#e34b55}
+.slide-dot[aria-current="true"],.image-stack .picture-label {background:#c62832}
+.value-index,.visit-card .card-label,.social-pill span {color:#e65a63}
+.intro-inner strong {color:#e34b55}
+.mission-highlight,.ministry-age {border-left-color:var(--red)}
+.callout {background:linear-gradient(100deg,#66171e 0%,#a11c27 45%,#381519 100%)}
