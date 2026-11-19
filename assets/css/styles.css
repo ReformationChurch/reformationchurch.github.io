@@ -28,19 +28,19 @@
 .ministry-meeting strong{font:800 clamp(1.25rem,2vw,1.75rem) var(--font);color:var(--cream);white-space:nowrap}
 .ministry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:clamp(56px,6vw,86px)}
 .ministry-card{min-width:0;display:flex;flex-direction:column;border:1px solid #49383f;background:#1b191c;overflow:hidden}
-.ministry-card-art{height:325px;display:grid;place-items:center;background:#181719;overflow:hidden}
-.ministry-card-art img{width:100%;height:100%;object-fit:contain}
+.ministry-card-art{height:clamp(255px,25vw,350px);min-width:0;display:flex;align-items:center;justify-content:center;padding:20px;background:#181719;overflow:hidden}
+.ministry-card-art img{display:block;flex:none;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;object-position:center}
 .ministry-card-copy{padding:clamp(28px,3vw,45px);flex:1;display:flex;flex-direction:column;align-items:flex-start}
 .ministry-card-copy h3{font:900 clamp(1.6rem,2.3vw,2.55rem)/1.08 var(--font);letter-spacing:-.055em;margin:20px 0 12px}
 .ministry-card-copy .body-copy{margin:10px 0 24px}
 .ministry-card-copy .section-link{margin-top:auto}
 .ministry-card-copy .ministry-meeting{margin:12px 0 8px}
 .ministry-card-wide{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr}
-.ministry-card-wide .ministry-card-art{height:auto;min-height:330px}
-.ministry-card-wide .ministry-card-art img{width:min(75%,450px);height:auto;object-fit:contain}
+.ministry-card-wide .ministry-card-art{height:clamp(255px,25vw,350px);min-height:255px}
+.ministry-card-wide .ministry-card-art img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;object-position:center}
 .ministry-card-wide .ministry-card-copy{justify-content:center}
-@media(max-width:950px){.ministry-featured{grid-template-columns:1fr}.ministry-featured-media{min-height:360px}.ministry-featured-copy{padding:38px}.ministry-featured-copy h3{font-size:clamp(2.6rem,6vw,4rem)}.ministry-card-art{height:285px}}
-@media(max-width:670px){.ministry-grid{grid-template-columns:1fr}.ministry-featured-media{min-height:230px}.ministry-featured-copy{padding:28px 23px 34px}.ministry-featured-copy h3{font-size:clamp(2.2rem,9vw,3.2rem)}.ministry-card-art{height:255px}.ministry-card-copy{padding:29px 24px 34px}.ministry-card-wide{grid-column:auto;grid-template-columns:1fr}.ministry-card-wide .ministry-card-art{height:280px;min-height:0}.ministry-card-wide .ministry-card-art img{max-height:230px;width:75%}}
+@media(max-width:950px){.ministry-featured{grid-template-columns:1fr}.ministry-featured-media{min-height:360px}.ministry-featured-copy{padding:38px}.ministry-featured-copy h3{font-size:clamp(2.6rem,6vw,4rem)}.ministry-card-art,.ministry-card-wide .ministry-card-art{height:290px;min-height:0}}
+@media(max-width:670px){.ministry-grid{grid-template-columns:1fr}.ministry-featured-media{min-height:230px}.ministry-featured-copy{padding:28px 23px 34px}.ministry-featured-copy h3{font-size:clamp(2.2rem,9vw,3.2rem)}.ministry-card-art,.ministry-card-wide .ministry-card-art{height:260px;min-height:0;padding:15px}.ministry-card-copy{padding:29px 24px 34px}.ministry-card-wide{grid-column:auto;grid-template-columns:1fr}.ministry-card-wide .ministry-card-art{height:260px;min-height:0}.ministry-card-wide .ministry-card-art img{width:auto;height:auto;max-width:100%;max-height:100%}}
 @media(prefers-reduced-motion:reduce){.ministry-featured-media video{visibility:hidden}.ministry-featured-media{background:center/contain no-repeat url('../images/disciple-one.webp')}}
 
 /* Youth and children's age ranges */
