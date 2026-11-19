@@ -46,3 +46,27 @@
 /* Youth and children's age ranges */
 .ministry-age{display:inline-block;margin:9px 0 13px;padding:10px 16px;background:#30252a;border-left:3px solid var(--red);color:#f2dfe0;font:800 .78rem var(--font);letter-spacing:.04em}
 .ministry-card-copy .ministry-age+.body-copy{margin-top:7px}
+
+
+/* Events: featured upcoming joint service */
+.events-section{padding-top:clamp(75px,8vw,120px)}
+.events-intro{margin:0 0 clamp(28px,4vw,52px)}
+.event-feature{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);background:radial-gradient(ellipse at 95% 10%,#442127,transparent 60%),#1b191c;border:1px solid #5a4248;overflow:hidden}
+.event-flyer{background:#0e0d0f;display:flex;align-items:center;justify-content:center;padding:clamp(12px,2.4vw,28px);min-width:0}
+.event-flyer img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;object-position:center;box-shadow:0 20px 48px #0008}
+.event-content{padding:clamp(30px,4.6vw,70px);align-self:center;min-width:0}
+.event-content h3{font:900 clamp(2.2rem,3.8vw,4.5rem)/1.02 var(--font);letter-spacing:-.06em;margin:22px 0 25px}
+.event-description{font-size:1rem;line-height:1.85;color:#d5c8c8;margin:0 0 26px;max-width:580px}
+.event-details{border-top:1px solid #59434a;border-bottom:1px solid #59434a;margin:30px 0;padding:9px 0}
+.event-detail{display:flex;flex-direction:column;gap:7px;padding:17px 0;border-bottom:1px solid #3b3238}
+.event-detail:last-child{border:0}
+.event-detail-label{font:800 .64rem var(--font);letter-spacing:.2em;text-transform:uppercase;color:#e1888d}
+.event-detail strong{font:800 clamp(1rem,1.4vw,1.22rem) var(--font);line-height:1.35;color:var(--cream)}
+.event-detail>span:last-child:not(.event-detail-label){font-size:.94rem;color:#c7babc;line-height:1.55}
+.event-actions{display:flex;flex-wrap:wrap;gap:12px}
+.event-more{display:flex;align-items:center;justify-content:space-between;gap:35px;flex-wrap:wrap;border:1px solid #4b3a40;background:#201d20;padding:28px clamp(24px,3vw,38px);margin-top:28px}
+.event-more p{margin:12px 0 0;color:#c9bfc0;line-height:1.6}
+.event-more .section-link{white-space:nowrap}
+@media(max-width:1000px){.event-feature{grid-template-columns:1fr 1fr}.event-content{padding:36px}.event-content h3{font-size:clamp(2rem,4.4vw,3.3rem)}}
+@media(max-width:760px){.event-feature{grid-template-columns:1fr}.event-flyer{padding:20px}.event-flyer img{max-width:520px}.event-content{padding:35px 28px 42px}.event-content h3{font-size:clamp(2.3rem,7vw,4rem)}.event-more{align-items:flex-start}}
+@media(max-width:540px){.event-flyer{padding:13px}.event-content{padding:29px 22px 37px}.event-content h3{font-size:clamp(2rem,8vw,3.2rem)}.event-actions .btn{width:100%}.event-more{padding:25px 22px}}
