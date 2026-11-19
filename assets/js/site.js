@@ -32,7 +32,10 @@
   function show(next){active=(next+slides.length)%slides.length;panels.forEach((s,i)=>{const shown=i===active;s.classList.toggle('active',shown);s.setAttribute('aria-hidden',String(!shown));s.querySelectorAll('a').forEach(a=>a.tabIndex=shown?0:-1)});dots.forEach((d,i)=>d.setAttribute('aria-current',String(i===active)));count.innerHTML=`<span>0${active+1}</span> / 0${slides.length}`;reset()}
   function reset(){clearInterval(timer);if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>show(active+1),6500)}
   hero.querySelector('.prev-slide').addEventListener('click',()=>show(active-1));hero.querySelector('.next-slide').addEventListener('click',()=>show(active+1));
-  hero.addEventListener('mouseenter',()=>clearInterval(timer));hero.addEventListener('mouseleave',reset);hero.addEventListener('focusin',()=>clearInterval(timer));hero.addEventListener('focusout',e=>{if(!hero.contains(e.relatedTarget))reset()});
+  // Do not pause simply because the mouse is over the hero: on many desktops it starts there.
+  // Keyboard focus pauses automatic slides so visitors can use carousel controls predictably.
+  hero.addEventListener('focusin',()=>clearInterval(timer));
+  hero.addEventListener('focusout',e=>{if(!hero.contains(e.relatedTarget))reset()});
   let touchStart=0;hero.addEventListener('touchstart',e=>{touchStart=e.changedTouches[0].screenX},{passive:true});hero.addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-touchStart;if(Math.abs(dx)>60)show(active+(dx<0?1:-1))},{passive:true});
   show(0);
 })();
