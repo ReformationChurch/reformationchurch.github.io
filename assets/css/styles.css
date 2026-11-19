@@ -151,3 +151,37 @@
   .hero-title {font-size:clamp(2.75rem,3.9vw,4.7rem)}
   .hero-bottom {padding-top:14px;padding-bottom:17px}
 }
+
+
+/* Header brand visibility refinement v1: use the original church mark at readable size. */
+@media(min-width:1101px){
+  .site-header{height:108px}
+  .header-inner{width:min(calc(100% - 5vw),1480px)}
+  .brand{min-width:300px;gap:15px;margin-left:-12px;flex-shrink:0}
+  .brand-mark{width:86px;height:86px;object-fit:contain;border:0;background:transparent;flex-shrink:0}
+  .brand-label{font-size:1.28rem;letter-spacing:.07em}
+  .brand-label small{font-size:.75rem;letter-spacing:.32em;margin-top:7px}
+}
+@media(min-width:831px) and (max-width:1100px){
+  .site-header{height:96px}
+  .header-inner{width:calc(100% - 4vw);gap:12px}
+  .brand{min-width:238px;gap:10px;margin-left:-4px;flex-shrink:0}
+  .brand-mark{width:70px;height:70px;object-fit:contain;border:0;background:transparent;flex-shrink:0}
+  .brand-label{font-size:1.02rem;letter-spacing:.055em}
+  .brand-label small{font-size:.62rem;letter-spacing:.24em;margin-top:6px}
+  .nav-links{gap:12px}
+  .nav-links a:not(.nav-give){font-size:.57rem}
+}
+@media(max-width:830px){
+  .site-header{height:84px}
+  .brand{gap:11px;margin-left:0}
+  .brand-mark{width:57px;height:57px;object-fit:contain;border:0;background:transparent;flex-shrink:0}
+  .brand-label{font-size:.91rem}
+  .brand-label small{font-size:.55rem;letter-spacing:.27em;margin-top:5px}
+}
+@media(max-width:540px){
+  .brand{gap:8px}
+  .brand-mark{width:52px;height:52px}
+  .brand-label{font-size:.82rem}
+  .brand-label small{font-size:.5rem;letter-spacing:.22em}
+}
